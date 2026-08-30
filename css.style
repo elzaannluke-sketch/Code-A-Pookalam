@@ -1,0 +1,32 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eceaea;
+}
+
+.mandala-wrap {
+  padding: 24px;
+  border-radius: 24px;
+}
+
+svg {
+  width: min(90vw, 600px);
+  height: min(90vw, 600px);
+  display: block;
+}
+
+/* ---- Palette ---- */
+.c-yellow   { fill: #f6d34c; }
+.c-orange   { fill: #f2a341; }
+.c-orange2  { fill: #f4b860; }
+.c-pink     { fill: #d94f7d; }
+.c-purple   { fill: #6a4c93; }
+.c-green    { fill: #5c9e3f; }
+.c-white    { fill: #fbf8ee; }
+.c-darkdot  { fill: #3b2352; }
+.c-outline  { stroke: #6b4a2b; stroke-width: 1.4; stroke-linejoin: round; }
+.no-outline { stroke: none; }

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lotus Mandala</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body style="margin:0; padding:0; height:100%; display:flex; align-items:center; justify-content:center; background:#eceaea;">
+
+<div class="mandala-wrap" style="padding:24px; border-radius:24px;">
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" style="width:min(90vw,600px); height:min(90vw,600px); display:block;">
+
+  <defs>
+    <radialGradient id="centerGrad" cx="50%" cy="45%" r="60%">
+      <stop offset="0%"  stop-color="#8a5a2c"/>
+      <stop offset="70%" stop-color="#5c3a1a"/>
+      <stop offset="100%" stop-color="#3a2410"/>
+    </radialGradient>
+    <radialGradient id="flameGrad" cx="50%" cy="30%" r="70%">
+      <stop offset="0%"  stop-color="#fff3b0"/>
+      <stop offset="60%" stop-color="#f6b93b"/>
+      <stop offset="100%" stop-color="#e08b1d"/>
+    </radialGradient>
+
+    <!-- ===== Petal / leaf templates, all pointing straight up, apex at top ===== -->
+    <path id="pOuterLeaf"  d="M219.6,79.2 Q151.3,62.1 300,8 Q448.7,62.1 380.4,79.2 Z"/>
+    <path id="pSmallLeaf"  d="M244.9,61.3 Q202.2,45.1 300,20 Q397.8,45.1 355.1,61.3 Z"/>
+    <path id="pOrange"     d="M269.2,215.4 Q193.0,128.7 300,70 Q407.0,128.7 330.8,215.4 Z"/>
+    <path id="pPink"       d="M272.6,224.8 Q204.6,147.4 300,95 Q395.4,147.4 327.4,224.8 Z"/>
+    <path id="pPurple"     d="M281.2,248.3 Q232.7,192.3 300,155 Q367.3,192.3 318.8,248.3 Z"/>
+    <path id="pGreen"      d="M288.0,267.1 Q246.3,214.0 300,182 Q353.7,214.0 312.0,267.1 Z"/>
+    <path id="pWhite"      d="M296.6,285.4 Q271.7,226.3 300,205 Q328.3,226.3 303.4,285.4 Z"/>
+  </defs>
+
+  <!-- Background disc -->
+  <circle cx="300" cy="300" r="292" fill="#f6d34c" stroke="#6b4a2b" stroke-width="2"/>
+
+  <!-- Outer green scalloped ring (8x) -->
+  <g class="c-green c-outline" fill="#5c9e3f" stroke="#6b4a2b" stroke-width="1.4" stroke-linejoin="round">
+    <use href="#pOuterLeaf" transform="rotate(0 300 300)"/>
+    <use href="#pOuterLeaf" transform="rotate(45 300 300)"/>
+    <use href="#pOuterLeaf" transform="rotate(90 300 300)"/>
+    <use href="#pOuterLeaf" transform="rotate(135 300 300)"/>
+    <use href="#pOuterLeaf" transform="rotate(180 300 300)"/>
+    <use href="#pOuterLeaf" transform="rotate(225 300 300)"/>
+    <use href="#pOuterLeaf" transform="rotate(270 300 300)"/>
+    <use href="#pOuterLeaf" transform="rotate(315 300 300)"/>
+  </g>
+
+  <!-- Small orange accent leaves, offset between the green scallops -->
+  <g class="c-orange2 c-outline" fill="#f4b860" stroke="#6b4a2b" stroke-width="1.4" stroke-linejoin="round">
+    <use href="#pSmallLeaf" transform="rotate(22.5 300 300)"/>
+    <use href="#pSmallLeaf" transform="rotate(67.5 300 300)"/>
+    <use href="#pSmallLeaf" transform="rotate(112.5 300 300)"/>
+    <use href="#pSmallLeaf" transform="rotate(157.5 300 300)"/>
+    <use href="#pSmallLeaf" transform="rotate(202.5 300 300)"/>
+    <use href="#pSmallLeaf" transform="rotate(247.5 300 300)"/>
+    <use href="#pSmallLeaf" transform="rotate(292.5 300 300)"/>
+    <use href="#pSmallLeaf" transform="rotate(337.5 300 300)"/>
+  </g>
+
+  <!-- Tiny dark dots sitting in the yellow band -->
+  <g class="c-darkdot" fill="#3b2352">
+    <circle cx="300" cy="52" r="4"/>
+    <g transform="rotate(45 300 300)"><circle cx="300" cy="52" r="4"/></g>
+    <g transform="rotate(90 300 300)"><circle cx="300" cy="52" r="4"/></g>
+    <g transform="rotate(135 300 300)"><circle cx="300" cy="52" r="4"/></g>
+    <g transform="rotate(180 300 300)"><circle cx="300" cy="52" r="4"/></g>
+    <g transform="rotate(225 300 300)"><circle cx="300" cy="52" r="4"/></g>
+    <g transform="rotate(270 300 300)"><circle cx="300" cy="52" r="4"/></g>
+    <g transform="rotate(315 300 300)"><circle cx="300" cy="52" r="4"/></g>
+  </g>
+
+  <!-- Large orange petals (8x) -->
+  <g class="c-orange c-outline" fill="#f2a341" stroke="#6b4a2b" stroke-width="1.4" stroke-linejoin="round">
+    <use href="#pOrange" transform="rotate(0 300 300)"/>
+    <use href="#pOrange" transform="rotate(45 300 300)"/>
+    <use href="#pOrange" transform="rotate(90 300 300)"/>
+    <use href="#pOrange" transform="rotate(135 300 300)"/>
+    <use href="#pOrange" transform="rotate(180 300 300)"/>
+    <use href="#pOrange" transform="rotate(225 300 300)"/>
+    <use href="#pOrange" transform="rotate(270 300 300)"/>
+    <use href="#pOrange" transform="rotate(315 300 300)"/>
+  </g>
+
+  <!-- Pink petals layered inside the orange (8x) -->
+  <g class="c-pink c-outline" fill="#d94f7d" stroke="#6b4a2b" stroke-width="1.4" stroke-linejoin="round">
+    <use href="#pPink" transform="rotate(0 300 300)"/>
+    <use href="#pPink" transform="rotate(45 300 300)"/>
+    <use href="#pPink" transform="rotate(90 300 300)"/>
+    <use href="#pPink" transform="rotate(135 300 300)"/>
+    <use href="#pPink" transform="rotate(180 300 300)"/>
+    <use href="#pPink" transform="rotate(225 300 300)"/>
+    <use href="#pPink" transform="rotate(270 300 300)"/>
+    <use href="#pPink" transform="rotate(315 300 300)"/>
+  </g>
+
+  <!-- Purple petals (8x) -->
+  <g class="c-purple c-outline" fill="#6a4c93" stroke="#6b4a2b" stroke-width="1.4" stroke-linejoin="round">
+    <use href="#pPurple" transform="rotate(0 300 300)"/>
+    <use href="#pPurple" transform="rotate(45 300 300)"/>
+    <use href="#pPurple" transform="rotate(90 300 300)"/>
+    <use href="#pPurple" transform="rotate(135 300 300)"/>
+    <use href="#pPurple" transform="rotate(180 300 300)"/>
+    <use href="#pPurple" transform="rotate(225 300 300)"/>
+    <use href="#pPurple" transform="rotate(270 300 300)"/>
+    <use href="#pPurple" transform="rotate(315 300 300)"/>
+  </g>
+
+  <!-- Small dark-purple dots between the purple petals -->
+  <g class="c-darkdot" fill="#3b2352">
+    <circle cx="300" cy="135" r="4" transform="rotate(22.5 300 300)"/>
+    <circle cx="300" cy="135" r="4" transform="rotate(67.5 300 300)"/>
+    <circle cx="300" cy="135" r="4" transform="rotate(112.5 300 300)"/>
+    <circle cx="300" cy="135" r="4" transform="rotate(157.5 300 300)"/>
+    <circle cx="300" cy="135" r="4" transform="rotate(202.5 300 300)"/>
+    <circle cx="300" cy="135" r="4" transform="rotate(247.5 300 300)"/>
+    <circle cx="300" cy="135" r="4" transform="rotate(292.5 300 300)"/>
+    <circle cx="300" cy="135" r="4" transform="rotate(337.5 300 300)"/>
+  </g>
+
+  <!-- Green leaf petals (8x) -->
+  <g class="c-green c-outline" fill="#5c9e3f" stroke="#6b4a2b" stroke-width="1.4" stroke-linejoin="round">
+    <use href="#pGreen" transform="rotate(0 300 300)"/>
+    <use href="#pGreen" transform="rotate(45 300 300)"/>
+    <use href="#pGreen" transform="rotate(90 300 300)"/>
+    <use href="#pGreen" transform="rotate(135 300 300)"/>
+    <use href="#pGreen" transform="rotate(180 300 300)"/>
+    <use href="#pGreen" transform="rotate(225 300 300)"/>
+    <use href="#pGreen" transform="rotate(270 300 300)"/>
+    <use href="#pGreen" transform="rotate(315 300 300)"/>
+  </g>
+
+  <!-- White lotus petals (8x) -->
+  <g class="c-white c-outline" fill="#fbf8ee" stroke="#6b4a2b" stroke-width="1.4" stroke-linejoin="round">
+    <use href="#pWhite" transform="rotate(0 300 300)"/>
+    <use href="#pWhite" transform="rotate(45 300 300)"/>
+    <use href="#pWhite" transform="rotate(90 300 300)"/>
+    <use href="#pWhite" transform="rotate(135 300 300)"/>
+    <use href="#pWhite" transform="rotate(180 300 300)"/>
+    <use href="#pWhite" transform="rotate(225 300 300)"/>
+    <use href="#pWhite" transform="rotate(270 300 300)"/>
+    <use href="#pWhite" transform="rotate(315 300 300)"/>
+  </g>
+
+  <!-- Tiny yellow dot fringe just outside the center -->
+  <g class="c-yellow" fill="#f6d34c">
+    <circle cx="300" cy="272" r="3" transform="rotate(22.5 300 300)"/>
+    <circle cx="300" cy="272" r="3" transform="rotate(67.5 300 300)"/>
+    <circle cx="300" cy="272" r="3" transform="rotate(112.5 300 300)"/>
+    <circle cx="300" cy="272" r="3" transform="rotate(157.5 300 300)"/>
+    <circle cx="300" cy="272" r="3" transform="rotate(202.5 300 300)"/>
+    <circle cx="300" cy="272" r="3" transform="rotate(247.5 300 300)"/>
+    <circle cx="300" cy="272" r="3" transform="rotate(292.5 300 300)"/>
+    <circle cx="300" cy="272" r="3" transform="rotate(337.5 300 300)"/>
+  </g>
+
+  <!-- Center diya (lamp) medallion -->
+  <circle cx="300" cy="300" r="40" fill="url(#centerGrad)" stroke="#3a2410" stroke-width="1.5"/>
+  <circle cx="300" cy="300" r="34" fill="none" stroke="#f6d34c" stroke-width="3.5" stroke-dasharray="1.5 4.5"/>
+  <ellipse cx="300" cy="306" rx="21" ry="7" fill="#3a2410"/>
+  <path d="M300,308 C289,297 287,282 300,264 C313,282 311,297 300,308 Z" fill="url(#flameGrad)"/>
+
+</svg>
+</div>
+
+</body>
+</html>
